@@ -1,15 +1,15 @@
 :root{
 --fondo1 : hsl(0, 0%, 100%);
 
---color2 : hsl(30, 54%, 90%);
+--color2 : hsl(40, 64%, 90%);
 --color3 : hsl(30, 18%, 87%);
 --color4 : hsl(30, 10%, 34%);
 --color5 : hsl(24, 5%, 18%);
 
 --cafe : hsl(14, 45%, 36%);
 
---Rose :800 hsl(332, 51%, 32%);
---Rose2 :50 hsl(330, 100%, 98%);
+--Rose : hsl(332, 51%, 32%);
+--Rose2 : hsl(330, 100%, 98%);
 }
 /* estilos globales */
 body{
@@ -19,14 +19,21 @@ h1{
     font-size: 2.5rem;
     font-family: 'Times New Roman', Times, serif;
     font-style: oblique;
+
 }
 p{
     font-size: 1.3rem;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
+    color: grey;
 }
 /* Desarrollo del proyecto */
-
+#tituloGlobal{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 100;
+}
 .tarjeta{
     width: 60%;
     background-color: var(--fondo1);
@@ -34,9 +41,83 @@ p{
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 50px auto;
-    text-align: center;
+    text-align: start;
     padding: 2rem;
 }
 .card-image{
     border-radius: 2rem;
+}
+
+#titulo1{
+    color: var(--Rose);
+}
+.preparacion{
+    width: 90%;
+    background-color: var(--color2);
+    margin: 0 auto;
+    text-align: start;
+    border-radius: 2rem;
+    padding-left: 1.5rem;
+}
+ul li::marker{
+    color: var(--cafe);
+}
+b{
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Ingredientes,
+#Instructiones,
+#nutricion{
+    color: var(--cafe);
+}
+ol li::marker{
+    color: var(--cafe);
+}
+.listaSinOrden{
+    color: grey;
+}
+.lisOrden{
+    color: grey;
+}
+strong{
+    color: var(--cafe);
+}
+hr{
+    border: 0;
+    border-top: 0.5px solid black;
+}
+
+/* zona de media-queries */
+
+@media (max-width: 768px) {
+    .tarjeta{
+        width: 95%;
+        max-width: 400px;
+        background-color: var(--fondo1);
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card-image{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+    .attribution{
+        font-size: 0.5rem;
+    }
+}
+footer{
+    text-align: center;
+    background-color: var(--fondo1);
+}
+.attribution{
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none;
 }
